@@ -21,7 +21,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <form name="eval" method="POST" data-netlify="true" class="col s12">
+        <form name="eval" method="POST" netlify-honeypot="honeypot-field" data-netlify="true" class="col s12">
           <div class="row">
             <div class="input-field col s12">
               <textarea id="kritik" name="kritik" class="materialize-textarea" required></textarea>
@@ -38,6 +38,12 @@
             <div class="input-field col s12">
               <textarea id="pesan" name="pesan" class="materialize-textarea" required></textarea>
               <label for="pesan">pesan</label>
+            </div>
+          </div>
+          <div class="row hide">
+            <div class="input-field col s12">
+              <textarea id="honeypot" name="honeypot-field" class="materialize-textarea"></textarea>
+              <label for="honeypot-field">honeypot</label>
             </div>
           </div>
           <div class="row center">
