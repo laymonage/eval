@@ -66,10 +66,20 @@
         </form>
       </div>
     </div>
-    <div id="success-modal" class="modal">
+    <div id="modal-success" class="modal">
       <div class="modal-content center-align">
         <h4 class="indigo-text">sukses</h4>
         <p class="blue-text">terima kasih atas evaluasi yang kamu berikan!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">tutup</a>
+      </div>
+    </div>
+    <div id="modal-failure" class="modal">
+      <div class="modal-content center-align">
+        <h4 class="indigo-text">gagal</h4>
+        <p class="blue-text">maaf, terjadi kegagalan dalam proses pengiriman evaluasi :(</p>
+        <pre class="red-text" id="message-error"></pre>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">tutup</a>

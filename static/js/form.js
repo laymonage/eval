@@ -1,12 +1,16 @@
-$(document).ready(function(){
-  var modal = M.Modal.init($('#success-modal')[0]);
+$(document).ready(() => {
+  let modalSuccess = M.Modal.init($('#modal-success')[0]);
+  let modalFailure = M.Modal.init($('#modal-failure')[0]);
 
-  $("#eval-form").submit(function(e) {
-    e.preventDefault();
+  $('#eval-form').submit(function(event) {
+    event.preventDefault();
 
-    var $form = $(this);
-    $.post($form.attr("action"), $form.serialize()).then(function() {
-      modal.open();
-    });
+    let form = $(this);
+    $.post(form.attr('action'), form.serialize())
+      .then(() => modalSuccess.open())
+      .catch((error) => {
+        $('#message-error').text(`[${error.status}] ${error.statusText}`);
+        modalFailure.open();
+      });
   });
 });
